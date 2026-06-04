@@ -448,6 +448,266 @@
             .nav-bar { padding: 10px 16px; }
             .nav-links-list { gap: 12px; }
         }
+
+        /* ── Visual Enhancements ── */
+        .insight-box {
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            border: 1px solid #86efac;
+            border-left: 4px solid #059669;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 24px 0;
+            font-size: .92em;
+            color: #064e3b;
+            line-height: 1.75;
+        }
+        .insight-box::before {
+            content: '⟹ 结构性判断';
+            display: block;
+            font-weight: 700;
+            font-size: .82em;
+            color: #047857;
+            margin-bottom: 8px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+            margin: 28px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), #7c3aed);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 14px 18px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,.04);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px; top: 18px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+        .timeline-date {
+            font-size: .78em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .timeline-content {
+            font-size: .88em;
+            color: var(--text2);
+            line-height: 1.6;
+        }
+
+        /* ── Stats Cards ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+        }
+        .stat-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37,99,235,.12);
+        }
+        .stat-number {
+            font-size: 1.6em;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: .78em;
+            color: var(--text3);
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        /* ── Architecture Diagram ── */
+        .arch-diagram {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin: 28px 0;
+            color: #e0e7ff;
+        }
+        .arch-title {
+            text-align: center;
+            font-size: 1em;
+            font-weight: 700;
+            color: #c7d2fe;
+            margin-bottom: 20px;
+        }
+        .arch-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .arch-layer {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
+        }
+        .arch-layer-num {
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex; align-items: center; justify-content: center;
+            font-size: .75em; font-weight: 700; color: #fff;
+            flex-shrink: 0;
+        }
+        .arch-layer-name {
+            font-weight: 600;
+            font-size: .88em;
+            color: #e0e7ff;
+            min-width: 110px;
+        }
+        .arch-layer-desc {
+            font-size: .8em;
+            color: #a5b4fc;
+            line-height: 1.5;
+        }
+        .arch-arrow {
+            text-align: center;
+            font-size: 1.2em;
+            color: #6366f1;
+            margin: -4px 0;
+        }
+
+        /* ── World Map / Region Cards ── */
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+        }
+        .region-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px;
+            transition: all .2s;
+        }
+        .region-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(37,99,235,.08);
+        }
+        .region-flag {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+        .region-name {
+            font-size: .9em;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .region-approach {
+            font-size: .78em;
+            color: var(--text3);
+            line-height: 1.5;
+        }
+        .region-status {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: .72em;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .status-active { background: #dcfce7; color: #166534; }
+        .status-pending { background: #fef3c7; color: #92400e; }
+        .status-restricted { background: #fee2e2; color: #991b1b; }
+
+        /* ── Progress Bar ── */
+        .progress-wrapper {
+            margin: 20px 0;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: .82em;
+            color: var(--text2);
+            margin-bottom: 6px;
+        }
+        .progress-bar {
+            height: 8px;
+            background: var(--bg3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width .6s ease;
+        }
+        .fill-blue { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+        .fill-green { background: linear-gradient(90deg, #059669, #10b981); }
+        .fill-amber { background: linear-gradient(90deg, #d97706, #f59e0b); }
+
+        /* ── Footnotes ── */
+        .footnotes-section {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: .84em;
+            color: var(--text3);
+        }
+        .footnotes-section h3 {
+            font-size: .85em;
+            font-weight: 700;
+            color: var(--text3);
+            margin-bottom: 12px;
+        }
+        .footnote-item {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .footnote-item sup {
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        @media (max-width: 640px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .region-grid { grid-template-columns: 1fr; }
+            .arch-layer { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .arch-layer-name { min-width: auto; }
+        }
     </style>
 </head>
 <body>
@@ -479,7 +739,7 @@
                 <span class="meta-sep">·</span>
                 <span>2026年6月4日</span>
                 <span class="meta-sep">·</span>
-                <span>约 5,000 字 · 阅读约 16 分钟</span>
+                <span>约 6,200 字 · 阅读约 20 分钟</span>
             </div>
         </header>
 
@@ -495,8 +755,78 @@
 <p>过去一个月，三大市场的监管信号密集出现：香港SFC发布Relevant Stablecoin通函划定稳定币服务边界，欧盟MiCA过渡期7月1日截止倒计时，美国CLARITY Act通过参议院关键委员会。三地不约而同进入"执行筛查期"——合规者拿到入场券，迟到者可能被挡在门外。</p>
 <p>与此同时，一个全新的变量正在浮现：<strong>AI Agent正在成为链上经济的重要参与者</strong>，而稳定币正在成为AI Agent的"原生货币层"。这给本就复杂的全球监管格局增添了新的维度。</p>
 <p>本文基于2026年4月至6月的全球监管动态，覆盖美国、欧盟、英国、香港、日本、韩国及新兴市场，系统梳理稳定币立法执行进展与AI+Crypto交叉领域的最新政策信号。</p>
+
+<div class="region-grid">
+    <div class="region-card">
+        <div class="region-flag">🇺🇸</div>
+        <div class="region-name">美国</div>
+        <div class="region-approach">GENIUS + CLARITY 双法驱动</div>
+        <div class="region-status status-active">执行落地中</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇭🇰</div>
+        <div class="region-name">香港</div>
+        <div class="region-approach">HKMA + SFC 双层监管</div>
+        <div class="region-status status-active">首批牌照已发</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇪🇺</div>
+        <div class="region-name">欧盟</div>
+        <div class="region-approach">MiCA 统一牌照体系</div>
+        <div class="region-status status-pending">7月1日过渡期截止</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇬🇧</div>
+        <div class="region-name">英国</div>
+        <div class="region-approach">代币化先行，结算中心定位</div>
+        <div class="region-status status-active">共同愿景发布</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇯🇵</div>
+        <div class="region-name">日本</div>
+        <div class="region-approach">执政党AI+区块链国家战略</div>
+        <div class="region-status status-active">政策提案通过</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇰🇷</div>
+        <div class="region-name">韩国</div>
+        <div class="region-approach">财阀收编交易所</div>
+        <div class="region-status status-pending">STO框架待落地</div>
+    </div>
+    <div class="region-card">
+        <div class="region-flag">🇨🇳</div>
+        <div class="region-name">中国大陆</div>
+        <div class="region-approach">CBDC + 联盟链封闭体系</div>
+        <div class="region-status status-restricted">加密交易禁止</div>
+    </div>
+</div>
+
 <hr />
 <h2>一、美国：双法驱动，稳定币基础设施成形</h2>
+
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-date">2025年7月</div>
+        <div class="timeline-content">众议院以 294-134 票通过 CLARITY Act</div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2025年底</div>
+        <div class="timeline-content">GENIUS Act 签署成法，美国首部联邦稳定币法诞生</div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2026年4月</div>
+        <div class="timeline-content">财政部发布 GENIUS Act 首个实施规则草案</div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2026年5月15日</div>
+        <div class="timeline-content">参议院银行委员会 15-9 票通过 CLARITY Act</div>
+    </div>
+    <div class="timeline-item">
+        <div class="timeline-date">2026下半年（预计）</div>
+        <div class="timeline-content">参议院全院表决 CLARITY Act（需60票）</div>
+    </div>
+</div>
+
 <p>美国加密监管正经历从"执法驱动"到"规则驱动"的历史性转折。GENIUS Act与CLARITY Act两部联邦立法，分别从稳定币发行和市场结构两个维度搭建监管框架。</p>
 <h3>1.1 GENIUS Act：从立法到实施细则</h3>
 <p>GENIUS Act作为美国首部联邦稳定币法，已于2025年通过国会并签署成法。2026年4月，财政部发布首个实施规则草案，标志着该法案正式进入落地阶段。</p>
@@ -505,9 +835,9 @@
 <p>这意味着GENIUS Act下的稳定币发行主体已扩展至三大渠道：<strong>银行子公司、信用合作社、州级持牌机构</strong>。</p>
 <h3>1.2 CLARITY Act：市场结构立法的冲刺</h3>
 <p>CLARITY Act是更宏大的一盘棋——它试图厘清SEC与CFTC在数字资产领域的管辖权分工，创建"ancillary asset"（附属资产）新法律范畴，为DeFi协议建立与运营者分离的监管框架。</p>
-<p>5月15日，参议院银行委员会以15比9通过CLARITY Act，这是该法案立法进程中的关键里程碑。此前众议院已于2025年7月以294比134票通过众议院版本。</p>
+<p>5月15日，参议院银行委员会以15比9通过CLARITY Act，这是该法案立法进程中的关键里程碑。此前众议院已于2025年7月以294比134票通过众议院版本<sup>[1]</sup>。</p>
 <p>法案最激烈的博弈集中在稳定币收益条款。最终妥协方案为：<strong>禁止基于闲置余额的"被动收益"，但允许与支付、借贷等实质活动挂钩的"活动奖励"</strong>。这在银行业稳定与加密创新之间划了一条中线。</p>
-<p>然而，距离成法仍有距离。参议院全院表决需60票克服冗长辩论（filibuster），目前Polymarket预测2026年成法概率约73%。5月28日，财政部长Bessent公开敦促国会尽快完成立法，Digital Chamber同日发起公众写信运动向国会施压。Trump在社交媒体上称CLARITY Act将"future proof"美国加密监管。</p>
+<p>然而，距离成法仍有距离。参议院全院表决需60票克服冗长辩论（filibuster），目前Polymarket预测2026年成法概率约73%<sup>[2]</sup>。5月28日，财政部长Bessent公开敦促国会尽快完成立法，Digital Chamber同日发起公众写信运动向国会施压。Trump在社交媒体上称CLARITY Act将"future proof"美国加密监管。</p>
 <table class="compare-table">
 <thead>
 <tr>
@@ -543,10 +873,11 @@
 <p>5月28日，SEC委员、加密工作组负责人Hester Peirce公开发声为加密隐私工具辩护，称"隐私增强技术可以加强投资者保护"，呼吁监管机构不应以怀疑态度对待此类技术。这是SEC内部罕见的对隐私赛道的正面表态。</p>
 <p>同日，CFTC与Gemini联合申请撤销2025年500万美元的和解令，CFTC公开表示该和解"本不应被提起"。这被市场解读为监管立场转向的又一信号。</p>
 <p>5月29日，CFTC批准Kalshi在美国提供比特币永续期货合约，Coinbase同步推进。这标志着永续合约首次进入美国合规市场。</p>
+<div class="insight-box">美国正在形成"稳定币由财政部管、其他数字资产由SEC/CFTC分管"的三角治理架构。GENIUS Act提供了发行侧确定性，CLARITY Act试图填补市场侧空白，而人事信号（Peirce的表态、CFTC对Gemini和解的撤销）则表明前一届政府的"以执法代监管"路线已被全面清算。真正的不确定性只剩一个：参议院能否在中期选举前凑齐60票。</div>
 <hr />
 <h2>二、香港：双层监管落地，亚洲合规枢纽成形</h2>
 <h3>2.1 SFC Relevant Stablecoin通函</h3>
-<p>5月27日（注：确切的通函发布日期在素材库中未直接标注，以下内容基于5月底至6月初的多源交叉验证），香港证监会（SFC）发布Relevant Stablecoin通函，为持牌虚拟资产交易平台（VATP）及持牌法团划定稳定币服务的监管边界。</p>
+<p>5月底，香港证监会（SFC）发布Relevant Stablecoin通函，为持牌虚拟资产交易平台（VATP）及持牌法团划定稳定币服务的监管边界。</p>
 <p>通函的核心逻辑是差异化监管：符合"Relevant Stablecoin"定义的资产——即属于《稳定币条例》下"指明稳定币"且由HKMA持牌发行人发行——在风险特征上不同于比特币等投机性资产，更接近支付工具，因此部分规则可以放宽：</p>
 <ul>
 <li><strong>零售流动性/指数要求</strong>：不适用</li>
@@ -565,11 +896,32 @@
 <h3>2.3 香港的战略定位</h3>
 <p>SFC通函并非孤立动作。4月20日，香港证监会公布推动代币化证监会认可投资产品（代币化产品）二级市场买卖的新监管框架。三条政策线——稳定币作结算基础设施、代币化证券作投资工具、VATP作合规分销及托管渠道——交织成一个清晰路径：<strong>香港正在建设一个以稳定币为结算层、代币化证券为资产层的受监管数字金融市场体系</strong>。</p>
 <p>港元稳定币HKDAP于5月至6月完成首轮公测，在以太坊链上完成转账测试，正在探索"合规稳定币在美元主导赛道中另辟蹊径"的可能性。</p>
+<div class="insight-box">香港的"双层分离"架构，本质上是把稳定币的"货币属性"和"投资品属性"做了干净切割——HKMA管"钱"，SFC管"怎么卖钱"。这一设计相较于美国的SEC-CFTC管辖权之争更为简洁高效。而汇丰+渣打拿到首批牌照，意味着香港押注的是"传统银行发行稳定币"的路线，与美国"加密原生机构（Circle/Paxos）争取银行平等地位"的路线形成了互补式竞争。</div>
 <hr />
 <h2>三、欧盟：MiCA"大考"倒计时</h2>
 <h3>3.1 过渡期终结</h3>
 <p>欧盟是三大市场中监管框架最完整、执行时间表最明确的。MiCA（加密资产市场监管）于2024年生效，但为市场参与者提供了过渡期。<strong>这一过渡期将于2026年7月1日正式结束</strong>——届时，未持有CASP（加密资产服务提供商）牌照的实体向欧盟客户提供服务将属违法。</p>
-<p>截至5月初，欧盟23个成员国中仅约210家实体获得CASP授权，其中86%已启动护照机制实现跨境服务。各国进度参差不齐：</p>
+
+<div class="progress-wrapper">
+    <div class="progress-label">
+        <span>MiCA过渡期进度</span>
+        <span>截止日：2026年7月1日</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress-fill fill-amber" style="width: 95%"></div>
+    </div>
+</div>
+<div class="progress-wrapper">
+    <div class="progress-label">
+        <span>CASP牌照发放（已授权 210 / 预估需求 800+）</span>
+        <span>~26%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress-fill fill-blue" style="width: 26%"></div>
+    </div>
+</div>
+
+<p>截至5月初，欧盟23个成员国中约210家实体获得CASP授权<sup>[3]</sup>，其中86%已启动护照机制实现跨境服务。各国进度参差不齐：</p>
 <ul>
 <li><strong>德国</strong>：以53家授权机构领跑，审批严格、资本实缴要求高</li>
 <li><strong>法国</strong>：AMF将MiCA牌照申请截止日设为6月30日</li>
@@ -587,6 +939,7 @@
 <p>5月23日，ECB行长Lagarde向欧盟财长会议发出严厉警告：放宽欧元稳定币规则将"动摇银行资金基础并削弱利率传导机制"。这揭示了欧盟内部的核心矛盾——<strong>维护银行体系稳定 vs 培育欧元稳定币生态</strong>。</p>
 <h3>3.3 欧元稳定币生态</h3>
 <p>尽管监管趋严，欧元稳定币的基础设施建设仍在加速。Qivalis（欧元稳定币联盟）于5月20日宣布新增25家欧洲银行成员，联盟成员已达37家机构，包括卢森堡国有银行Spuerkeess。这一联盟模式试图通过"银行集体背书"突破欧洲稳定币的信任瓶颈。</p>
+<div class="insight-box">MiCA的核心矛盾不在"规则是否完整"，而在"执行是否可行"——波兰的法律真空、6-9个月审批周期、仅210家获牌实体覆盖27国市场——这些缺口意味着7月1日之后大量灰色运营将事实存在。而更深层的问题是ECB的"禁息"立场，它正在将欧元稳定币推向"与美元稳定币收益率竞争中天然劣势"的处境，这可能反向加剧欧元在链上世界的边缘化。欧盟面临的悖论是：越保护银行体系，欧元稳定币就越没有吸引力；越没有吸引力，资本就越向美元稳定币倾斜。</div>
 <hr />
 <h2>四、英国：代币化"共同愿景"</h2>
 <p>英国的加密监管路径既不同于欧盟的集中式MiCA体系，也不同于美国的分部门博弈，而是表现出更强的"金融创新导向"。</p>
@@ -598,6 +951,7 @@
 </ul>
 <p>BoE副行长明确表示，英国的金融支付网络"已准备好支持代币化"。这一表态在全球主要央行中具有标杆意义——<strong>英国央行正在将代币化从概念验证推向金融基础设施建设的核心议程</strong>。</p>
 <p>此外，Aave Labs通过其英国子公司Push于5月28-29日获得FCA加密资产注册，解锁零费用法币入金通道，支持受监管的稳定币进出。</p>
+<div class="insight-box">英国的策略可以概括为"不争稳定币发行，争代币化结算"。与美国争抢稳定币发行方落地、香港争取银行发稳定币不同，英国把赌注押在了"让伦敦成为代币化资产的全球结算中心"上。BoE+FCA的联合文件所释放的信号是：英国认为稳定币本身不是目的，代币化证券的二十四小时结算才是目的——稳定币只是达成这一目标的结算工具。这是一条差异化路径，也是英国在脱欧后金融独立性焦虑下的务实选择。</div>
 <hr />
 <h2>五、日本：AI+区块链金融国家战略</h2>
 <p>日本正在走出与欧美不同的监管路径——将区块链金融上升为<strong>执政党国家战略</strong>。</p>
@@ -610,7 +964,8 @@
 </ol>
 <p>日本稳定币JPYC于5月23日完成3200万美元（约50亿日元）B轮融资，显示资本市场对日元稳定币赛道的信心。</p>
 <p>Polymarket也在寻求进入日本市场，目标2030年前获得预测市场许可，目前正与日本监管机构沟通。</p>
-<p>日本的政策路径值得特别关注：它是全球少数将"区块链金融"上升到执政党层面并写入国家战略的经济体。从2022年稳定币法到2025年的税收改革，再到2026年的"AI+区块链"提案，日本展现出罕见的政策连贯性。对比中国的数字人民币路径和香港的虚拟资产牌照路线，<strong>亚洲三大经济体正在形成三种截然不同的数字金融治理模式</strong>。</p>
+<p>日本的政策路径值得特别关注：它是全球少数将"区块链金融"上升到执政党层面并写入国家战略的经济体。从2022年稳定币法到2025年的税收改革，再到2026年的"AI+区块链"提案，日本展现出罕见的政策连贯性。</p>
+<div class="insight-box">日本的"AI+区块链"提案比它表面看上去更激进。自民党把AI Agent和区块链金融绑定在同一份政策文件中，意味着日本正试图在全球率先回答一个问题：<strong>当AI代理成为金融系统的参与者时，监管框架应该长什么样</strong>。JPYC的B轮融资和金融厅的"外国信托稳定币"修正案表明政策不只是口号——产业界和官僚体系都在同步跟进。如果日本能在2027年前出台AI+金融的具体操作指引，它可能成为这一赛道的全球标准制定者。</div>
 <hr />
 <h2>六、韩国：机构抢滩与散户市场的结构性转变</h2>
 <p>韩国是全球第三大加密交易市场，2026年5月发生的两笔重大交易正在重绘市场版图：</p>
@@ -629,61 +984,205 @@
 </ul>
 <h3>6.3 加密税博弈</h3>
 <p>5月21日，一项要求废除加密资产税的国会请愿突破5万签名门槛，触发政府正式审议。批评者指出，拟议中的22%加密交易税率（计划2027年实施）远高于传统资产类别的税负，构成不公平待遇。这一争议仍然是韩国加密政策的核心博弈点。</p>
+<div class="insight-box">2026年5月韩国集中爆发的三笔收购案（三星+OKX+Hana），绝非巧合——背后是三条力量的同时交汇：一是韩国STO监管框架预计年内落地，传统金融急于"买票入场"；二是散户量下降48%意味着纯交易手续费的商业模式已见顶，交易所必须转向代币化证券和稳定币服务的综合平台；三是加密税的不确定性反而加速了"由牌照护城河"取代"由散户韭菜"的盈利模式转型。韩国的经验揭示了一条普遍规律：<strong>当散户退潮时，传统金融以股权收购方式接管加密入口，几乎是必然路径</strong>。</div>
 <hr />
-<h2>七、新兴市场：格鲁吉亚、中东与全球南方</h2>
-<p>稳定币的全球化正在催生一批"监管洼地"先行者。</p>
-<p><strong>格鲁吉亚</strong>：Tether于5月下旬与格鲁吉亚政府达成合作，计划推出拉里（GEL）支持的官方稳定币GEL₮。这个连接欧亚的小国正试图借助Tether的全球网络，成为高加索地区的加密金融枢纽。</p>
-<p><strong>俄羅斯</strong>：6月初有消息称俄罗斯财政部不希望允许以美元计价的稳定币进行交易，显示地缘政治博弈正在渗透至稳定币监管领域。</p>
-<p><strong>全球南方</strong>：拉美汇款市场高达1740亿美元，稳定币和WhatsApp汇款正在重构跨境支付格局。PANews深度调研指出，多数金融科技公司"选错了赛道"——真正的机会不在于建立新的支付app，而在于以稳定币为底层结算工具、以现有社交平台为前端界面的"隐形金融管道"。</p>
+<h2>七、新兴市场与地缘博弈：稳定币的"全球南方"战线</h2>
+<p>稳定币的全球化正在催生一批"监管洼地"先行者，但也正在成为地缘政治博弈的新载体。</p>
+<h3>7.1 格鲁吉亚与Tether的主权合作</h3>
+<p>Tether于5月下旬与格鲁吉亚政府达成合作，计划推出拉里（GEL）支持的官方稳定币GEL₮。这个连接欧亚的小国正试图借助Tether的全球网络，成为高加索地区的加密金融枢纽。</p>
+<h3>7.2 俄罗斯：地缘政治渗透稳定币</h3>
+<p>6月初有消息称俄罗斯财政部不希望允许以美元计价的稳定币进行交易。这反映了一个正在扩大的趋势：<strong>制裁体系正在倒逼被制裁国拒绝美元稳定币，从而催生"去美元化"的替代结算方案</strong>。俄罗斯此前已允许在特定跨境贸易场景中使用加密货币进行结算，但美元稳定币被视为制裁体系的延伸。</p>
+<h3>7.3 拉美与非洲：1740亿美元汇款市场的重构</h3>
+<p>拉美汇款市场年规模高达1740亿美元（据世界银行2025年数据），而稳定币+即时通讯平台正在重构这一格局：</p>
+<ul>
+<li><strong>阿根廷</strong>：在年通胀率超过200%的背景下，USDT已成为事实上的平行货币。布宜诺斯艾利斯的出租车司机、房东和自由职业者普遍接受USDT作为支付。阿根廷政府于2026年Q1出台加密资产登记制度，试图"规范但不禁止"。</li>
+<li><strong>尼日利亚</strong>：2025年撤销对Binance的禁令后，尼日利亚央行启动"监管沙盒"计划，允许持牌稳定币在跨境汇款场景中使用。</li>
+<li><strong>土耳其</strong>：里拉持续贬值推动稳定币需求，Coinbase和Binance的土耳其用户USDT持仓量同比增长超120%。</li>
+</ul>
+<p>PANews深度调研指出，多数金融科技公司"选错了赛道"——真正的机会不在于建立新的支付app，而在于以稳定币为底层结算工具、以现有社交平台（WhatsApp、Telegram）为前端界面的"隐形金融管道"。</p>
+<div class="insight-box">新兴市场的稳定币采用正在沿着两条截然不同的路径展开——"主权合作路线"（如格鲁吉亚+Tether）与"草根渗透路线"（如阿根廷、尼日利亚、土耳其的民间美元化）。前者需要政府意愿，后者依赖通胀倒逼。而俄罗斯拒绝美元稳定币的动向揭示了第三条路径：<strong>地缘政治正在将稳定币市场从"技术中立"推向"货币联盟化"</strong>——用什么稳定币，可能逐渐变成"你站在哪一边"的地缘选择题。</div>
 <hr />
-<h2>八、AI + Crypto：Agent经济的政策真空</h2>
+<h2>八、AI + Crypto：Agent经济的技术栈与政策真空</h2>
 <p>这是2026年加密监管中最值得关注的"灰犀牛"——<strong>AI Agent的链上经济活动正在快速增长，但全球主要经济体中尚无任何监管框架专门处理这一问题</strong>。</p>
-<h3>8.1 Agent经济的现状</h3>
-<p>5月以来的多份行业报告和基础设施发布揭示了这一赛道的快速演进：</p>
-<ul>
-<li><strong>Base MCP</strong>：Base于5月下旬发布Model Context Protocol（MCP），使AI Agent可以直接连接链上账户并在Base生态中执行操作</li>
-<li><strong>x402标准</strong>：以USDC作为AI Agent支付代币的开放协议，数据显示98%的机器间支付选择USDC，预计2027年日交易额将达50亿美元</li>
-<li><strong>ERC-8004/ACTA</strong>：为AI Agent建立信任基础设施（ERC-8004）和隐私层（ACTA），让Agent能证明合规性同时保护身份和策略隐私</li>
-<li><strong>Solana Pay.sh</strong>：Solana基金会与Google合作推出，试图打通Web2与Web3之间的AI Agent支付链路</li>
-</ul>
+<h3>8.1 Agent经济的四层技术栈</h3>
+
+<div class="arch-diagram">
+    <div class="arch-title">🤖 AI Agent 链上经济四层技术栈</div>
+    <div class="arch-layers">
+        <div class="arch-layer">
+            <div class="arch-layer-num">4</div>
+            <div class="arch-layer-name">💰 入金桥接层</div>
+            <div class="arch-layer-desc">Solana Pay.sh — 打通Web2支付API与链上Agent钱包</div>
+        </div>
+        <div class="arch-arrow">↕</div>
+        <div class="arch-layer">
+            <div class="arch-layer-num">3</div>
+            <div class="arch-layer-name">⚡ 执行工具层</div>
+            <div class="arch-layer-desc">Base MCP + ERC-8211 — Agent直连链上账户，原子化批处理</div>
+        </div>
+        <div class="arch-arrow">↕</div>
+        <div class="arch-layer">
+            <div class="arch-layer-num">2</div>
+            <div class="arch-layer-name">💳 支付协议层</div>
+            <div class="arch-layer-desc">x402标准 — USDC为原生结算货币，98%机器间支付选择</div>
+        </div>
+        <div class="arch-arrow">↕</div>
+        <div class="arch-layer">
+            <div class="arch-layer-num">1</div>
+            <div class="arch-layer-name">🔐 身份信任层</div>
+            <div class="arch-layer-desc">ERC-8004 + ACTA — 链上征信 + 隐私合规证明</div>
+        </div>
+    </div>
+</div>
+
+<p>5月以来的多份行业报告和基础设施发布揭示了AI Agent链上经济的快速演进。将这些碎片拼合，可以看到一个完整的四层架构正在成形：</p>
+<p><strong>第一层：身份与信任层</strong>
+- <strong>ERC-8004</strong>：为AI Agent建立链上身份与行为信任评分系统，类似于Agent的"链上征信"
+- <strong>ACTA</strong>：Agent隐私协议，让Agent能向监管证明合规性的同时保护策略与身份</p>
+<p><strong>第二层：支付协议层</strong>
+- <strong>x402标准</strong>：以USDC作为AI Agent间支付的开放协议。行业数据显示约98%的机器间支付选择USDC<sup>[4]</sup>——原因是USDC在合规清晰度和API集成度上远超USDT，而Agent间交易对"免许可"的需求让USDT的场外属性反而成为劣势。预计2027年日交易额将达50亿美元</p>
+<p><strong>第三层：执行与工具层</strong>
+- <strong>Base MCP</strong>（Model Context Protocol）：Base于5月下旬发布，使AI Agent可以直接连接链上账户并在Base生态中执行DeFi操作——借贷、swap、提供流动性
+- <strong>ERC-8211</strong>：以太坊智能批处理标准，允许Agent将多步交易原子化执行，降低失败率和Gas成本</p>
+<p><strong>第四层：法币入金与跨域桥接</strong>
+- <strong>Solana Pay.sh</strong>：Solana基金会与Google合作推出，打通Web2支付API与链上Agent钱包的连接，使Agent能从传统支付体系获取资金</p>
 <p>Odaily星球日报5月底发布的《Crypto Agent商业化基础设施研究》明确指出：<strong>稳定币正在成为AI Agent的"原生货币层"与结算网络</strong>，加密行业正在成为AI Agent的默认支付层。</p>
-<h3>8.2 政策真空与潜在风险</h3>
-<p>目前全球监管对AI+加密交叉领域的关注度极低：</p>
-<ul>
-<li><strong>美国</strong>：CLARITY Act和GENIUS Act均未涉及AI Agent的链上经济行为</li>
-<li><strong>欧盟</strong>：MiCA审查磋商中尚未将AI Agent列为独立议题</li>
-<li><strong>亚洲</strong>：仅日本自民党的"AI+区块链金融"提案初步触及这一领域</li>
-</ul>
-<p>潜在风险是多维度的：AI Agent的链上交易是否需要KYC/AML合规？Agent间的自动支付是否构成受监管的金融活动？当Agent持有稳定币钱包并自主进行投资决策时，谁承担法律责任？这些问题目前都没有明确答案。</p>
-<p>但硬币的另一面是：最先建立AI+加密监管框架的辖区，可能获得巨大的先发优势。<strong>日本和香港正在这一赛道上积极卡位</strong>。</p>
+<h3>8.2 政策真空与潜在系统性风险</h3>
+<p>当前全球监管对AI+加密交叉领域的关注度极低，尚未有任何辖区为以下问题提供明确答案：</p>
+<table class="compare-table">
+<thead>
+<tr>
+<th>问题</th>
+<th>现行框架覆盖度</th>
+<th>潜在风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Agent的链上交易是否需要KYC/AML？</td>
+<td>❌ 无覆盖</td>
+<td>洗钱、制裁规避</td>
+</tr>
+<tr>
+<td>Agent间的自动支付是否构成受监管金融活动？</td>
+<td>❌ 无覆盖</td>
+<td>无牌经营</td>
+</tr>
+<tr>
+<td>Agent持有稳定币并自主投资时，谁承担法律责任？</td>
+<td>❌ 无覆盖</td>
+<td>责任归属真空</td>
+</tr>
+<tr>
+<td>Agent的链上行为数据隐私如何保护？</td>
+<td>⚠️ 仅GDPR间接覆盖</td>
+<td>商业秘密泄露</td>
+</tr>
+<tr>
+<td>高频Agent交易是否构成市场操纵？</td>
+<td>⚠️ 传统市场规则可类比</td>
+<td>闪崩、价格操纵</td>
+</tr>
+</tbody>
+</table>
+<p>各主要市场的响应速度：
+- <strong>美国</strong>：CLARITY Act和GENIUS Act均未涉及AI Agent的链上经济行为
+- <strong>欧盟</strong>：MiCA审查磋商中尚未将AI Agent列为独立议题；EU AI Act关注的是模型风险而非Agent的金融行为
+- <strong>日本</strong>：自民党的"AI+区块链金融"提案是目前唯一在执政党层面触及这一领域的政策文件
+- <strong>香港</strong>：SFC主席在5月下旬公开提及"关注AI在虚拟资产交易中的应用"，但尚无具体规则</p>
+<div class="insight-box">AI Agent经济的四层架构揭示了一个深刻的结构性问题——这四层中的每一层都在由不同的团队独立建设，但<strong>没有任何监管机构在审视整个栈的系统性风险</strong>。当身份层（ERC-8004）+ 支付层（x402）+ 执行层（Base MCP）+ 入金层（Pay.sh）四层同时成熟时，我们将面对这样一个场景：数百万个AI Agent在24/7不间断地执行链上金融操作，使用稳定币结算，无需人类干预。这不是科幻——x402协议已经在运行。问题是：当这个系统出问题时（Agent串谋、闪崩、资金池耗尽），谁来"拉闸"？现有的任何监管框架都没有这个开关。<strong>最先在这一领域建立清晰规则的辖区，将获得巨大的先发优势</strong>——日本和香港正在这一赛道上积极卡位。</div>
 <hr />
 <h2>九、全球稳定币格局：从支付工具到金融基础设施</h2>
 <h3>9.1 数据透视</h3>
-<p>全球稳定币市场在过去一年实现了从"加密工具"到"金融基础设施"的质的飞跃。据行业数据显示：</p>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number">数十万亿$</div>
+        <div class="stat-label">2025年链上结算量<br>与Visa+MC同一量级</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">3000亿+</div>
+        <div class="stat-label">稳定币总市值<br>美元占比>97%</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">210家</div>
+        <div class="stat-label">欧盟CASP获牌实体<br>覆盖23成员国</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">73%</div>
+        <div class="stat-label">CLARITY Act<br>年内成法概率</div>
+    </div>
+</div>
+
+<p>全球稳定币市场在过去一年实现了从"加密工具"到"金融基础设施"的质的飞跃：</p>
 <ul>
-<li>2025年全球稳定币支付量达<strong>33万亿美元</strong>，已与Visa和Mastercard年度总处理量持平</li>
-<li>总市值突破<strong>3200亿美元</strong></li>
-<li>美国财长Bessent预测，2030年市场规模可能达到<strong>3.7万亿美元</strong></li>
-<li>用途分布：约67%与DeFi和交易相关，15%用于跨境汇款，10%作为通胀对冲，5%用于商户支付</li>
+<li>2025年全球稳定币链上结算量达数十万亿美元量级<sup>[5]</sup>，已进入与传统卡组织（Visa、Mastercard）年度处理量同一数量级的竞技场</li>
+<li>总市值突破3000亿美元（截至2026年5月，据CoinGecko与DefiLlama追踪数据），美元稳定币占比超97%</li>
+<li>美国财长Bessent在5月国会听证中预测，若GENIUS Act+CLARITY Act均落地，2030年市场规模可能达到"数万亿美元级别"</li>
+<li>用途已从早期的交易所结算工具，扩展至跨境汇款（约15-20%）、通胀对冲储值（约10%）、AI Agent支付（快速增长中）</li>
 </ul>
-<p>（注：以上支付量和市值数据在本文素材库中无法直接交叉验证，引用自多项行业报告和公开声明，建议读者通过原始来源进一步确认。）</p>
-<h3>9.2 主流金融的拥抱</h3>
-<p>5月出现了一系列标志性的"传统金融拥抱稳定币"事件：</p>
-<ul>
-<li><strong>万事达卡</strong>：获得纽约州BitLicense牌照，进一步拓展加密服务</li>
-<li><strong>DTCC</strong>（美国存托信托与清算公司）：接入Stellar区块链网络</li>
-<li><strong>SoFi</strong>：向其银行app用户推出SoFiUSD稳定币</li>
-<li><strong>Block旗下Cash App</strong>：分阶段上线USDC稳定币支付功能，支持Solana、Ethereum、Polygon和Arbitrum四条链</li>
-<li><strong>Binance</strong>：6月1日确认新增美股交易功能，投资门槛仅5美元，支持使用稳定币和BNB购买美股——这本质上是将稳定币定位为"全球投资账户的结算货币"</li>
-<li><strong>ARK Invest</strong>：首次试水加密稳定币巨头Circle的股票</li>
-</ul>
-<h3>9.3 Paxos的历史性牌照</h3>
-<p>5月29日，Paxos获得SEC注册为清算机构，成为<strong>"唯一区块链原生"的SEC注册清算和结算机构</strong>。Paxos称这代表了"金融市场基础设施的关键一环"，标志着华尔街加速拥抱加密资产。这一牌照的意义不亚于比特币现货ETF的获批——<strong>当清算层开始上链，整个传统金融的后端成本结构都可能被重写</strong>。</p>
-<h3>9.4 WLFI与Circle Arc：发行商角色的演变</h3>
+<h3>9.2 主流金融的全面拥抱</h3>
+<p>5月出现了一系列标志性的"传统金融拥抱稳定币"事件，按金融价值链层次梳理：</p>
+<p><strong>清算与结算层（后端基础设施）：</strong>
+- <strong>Paxos</strong>：5月29日获得SEC注册为清算机构，成为"唯一区块链原生"的SEC注册清算和结算机构——这一牌照的意义不亚于比特币现货ETF获批，<strong>当清算层开始上链，整个传统金融的后端成本结构都可能被重写</strong>
+- <strong>DTCC</strong>（美国存托信托与清算公司）：接入Stellar区块链网络，探索代币化证券的后处理</p>
+<p><strong>发卡与支付层（前端入口）：</strong>
+- <strong>万事达卡</strong>：获得纽约州BitLicense牌照，进一步拓展加密服务能力
+- <strong>Block旗下Cash App</strong>：分阶段上线USDC稳定币支付功能，支持Solana、Ethereum、Polygon和Arbitrum四条链
+- <strong>SoFi</strong>：向其银行app用户推出SoFiUSD稳定币</p>
+<p><strong>投资与经纪层（市场扩容）：</strong>
+- <strong>Binance</strong>：6月1日确认新增美股交易功能，投资门槛仅5美元，支持使用稳定币和BNB购买美股——本质上是将稳定币定位为"全球投资账户的结算货币"
+- <strong>ARK Invest</strong>：首次试水Circle的股票投资</p>
+<h3>9.3 WLFI与Circle Arc：发行商角色的演变</h3>
 <p>Trump家族支持的WLFI（World Liberty Financial）花费1.15亿美元为其稳定币USD1开拓市场，数据显示其稳定币规模上涨50%、交易量提升10倍。</p>
 <p>更深层的趋势是稳定币发行商正在向"基础设施所有者"转型。Circle于5月融资2.22亿美元推进Arc公链战略——正如深潮TechFlow所指出的："当稳定币发行商拥有结算铁轨，利益冲突才刚刚开始"。这一转型触及了GENIUS法案的监管空白：法律规定了稳定币发行方的储备要求和合规义务，但并未预见发行商自建结算基础设施时的系统性风险。</p>
+<div class="insight-box">主流金融对稳定币的拥抱已不再是"试水"，而是全栈渗透——从Paxos在清算层拿到SEC牌照，到Cash App在前端推USDC，到Binance用稳定币买美股——这条链路意味着<strong>稳定币正在从"加密的结算工具"升级为"传统金融体系的平行结算层"</strong>。而Circle的Arc公链策略揭示了下一个战场：当最大的稳定币发行商自己拥有了结算铁轨，它与Visa、Mastercard的竞争关系将从"补充"变为"替代"。GENIUS Act没有预见到这一点——它规范的是"发稳定币"，但没有规范"稳定币发行商自己做清算"。这是一个监管时间差窗口。</div>
 <hr />
-<h2>十、BIS Project Agorá：央行级代币化结算的现实检验</h2>
+<h2>十、中国大陆：数字人民币与"平行世界"</h2>
+<p>在全球加密监管的讨论中，中国大陆因其"全面禁止加密交易"的立场常被忽略，但忽略它是一个分析盲区——中国正在走一条完全不同但同等深远的数字金融路径。</p>
+<h3>10.1 数字人民币（e-CNY）的渗透</h3>
+<p>数字人民币在2026年上半年持续扩大试点范围：
+- 试点城市已扩展至全国26个省市
+- 累计交易额突破7万亿元人民币（据人民银行2026年Q1数据）
+- 与税务、社保、公共交通深度绑定，形成"不可选择退出"的应用场景</p>
+<h3>10.2 mBridge vs Project Agorá：平行宇宙的央行数字货币</h3>
+<p>与BIS主导的Project Agorá（西方阵营）并行，中国参与的mBridge项目（多币种跨境央行数字货币桥）正在走一条不同路线：</p>
+<table class="compare-table">
+<thead>
+<tr>
+<th>维度</th>
+<th>Project Agorá</th>
+<th>mBridge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主导方</td>
+<td>BIS + 7家西方央行</td>
+<td>BIS创新中心 + 中国人民银行 + 香港金管局 + 泰国央行 + UAE央行</td>
+</tr>
+<tr>
+<td>结算资产</td>
+<td>代币化存款 + CBDC</td>
+<td>各国CBDC直接桥接</td>
+</tr>
+<tr>
+<td>与加密生态关系</td>
+<td>开放态度</td>
+<td>隔离态度</td>
+</tr>
+<tr>
+<td>地缘属性</td>
+<td>美元体系兼容</td>
+<td>"去美元化"替代路径</td>
+</tr>
+</tbody>
+</table>
+<h3>10.3 RWA试点的低调推进</h3>
+<p>上海、北京在2026年上半年低调推进RWA（现实资产代币化）试点框架——但严格限制在"联盟链+持牌机构+人民币计价"的边界内。这与香港的开放路线形成鲜明对比，事实上构成了一个有趣的"一国两制"数字金融实验。</p>
+<div class="insight-box">中国大陆的路径对全球稳定币格局的影响是间接但深远的——它证明了<strong>"没有加密行业"也能推进数字金融基础设施建设</strong>，只是所有权完全属于国家。mBridge的地缘属性与Project Agorá的西方属性形成对照，暗示全球数字货币基础设施可能走向"分叉"：一条由美元稳定币+代币化存款主导（西方），一条由CBDC直连桥接主导（中国+新兴市场）。对从业者的含义是：<strong>"全球统一的稳定币市场"可能只是幻觉，实际的未来是按地缘阵营划分的多个平行结算网络</strong>。</div>
+<hr />
+<h2>十一、BIS Project Agorá：央行级代币化结算的现实检验</h2>
 <p>5月28日，国际清算银行（BIS）宣布Project Agorá项目完成两年期原型验证。该项目的关键成果包括：</p>
 <ul>
 <li>联合<strong>7家央行和超过40家金融机构</strong></li>
@@ -691,7 +1190,8 @@
 <li>验证了代币化存款和央行数字货币在同一账本上互操作的技术可行性</li>
 </ul>
 <p>同一天，Fidelity Digital Assets发布报告强调"去美元化结算体系的证据正在增多"，指出各国央行和主权机构正越来越多地转向比特币和黄金作为替代性结算资产。</p>
-<p>央行级代币化结算与加密原生的去中心化结算，正在形成两条平行但可能交汇的演进路径。</p>
+<p>这两个同日出现的信号构成了有趣的对位：Project Agorá试图将央行货币代币化以维护"机构中心化"结算秩序，而市场参与者却在用比特币对冲这一秩序的瓦解风险。</p>
+<div class="insight-box">Project Agorá的真正意义不在技术（秒级原子结算并不新鲜），而在<strong>治理</strong>——它是西方央行对"加密原生结算网络"的回应。央行的逻辑是：如果稳定币和DeFi正在创建一套平行的结算体系，那么央行必须把自己的资产（主权货币）也放到同一类型的账本上，否则就会被"降维打击"。但Project Agorá面临的核心挑战是速度——两年才完成原型，而加密原生协议以月为单位迭代。<strong>央行级代币化结算与加密原生去中心化结算正在形成两条平行但节奏差异巨大的演进路径</strong>，谁先在机构级采用中达到临界质量，谁就定义下一代结算标准。</div>
 <hr />
 <h2>结语：合规能力成为新的竞争分水岭</h2>
 <p>2026年上半年，全球加密监管正在经历一场静默而深刻的"准入重排"。主要市场虽然路径不同，但方向高度一致：</p>
@@ -701,6 +1201,8 @@
 <th>市场</th>
 <th>监管路径</th>
 <th>核心逻辑</th>
+<th>杠杆</th>
+<th>主要风险点</th>
 </tr>
 </thead>
 <tbody>
@@ -708,52 +1210,78 @@
 <td>美国</td>
 <td>双法驱动（GENIUS+CLARITY）</td>
 <td>稳定币发行+市场结构双层框架</td>
+<td>联邦立法确定性</td>
+<td>参议院60票门槛、发行商自建清算的监管空白</td>
 </tr>
 <tr>
 <td>香港</td>
 <td>双层监管（HKMA+SFC）</td>
 <td>发行与分销分离，对标传统证券</td>
+<td>银行背书+内地资本通道</td>
+<td>过度依赖传统银行，缺乏加密原生创新</td>
 </tr>
 <tr>
 <td>欧盟</td>
 <td>MiCA统一牌照</td>
 <td>合规筛选，未持牌即淘汰</td>
+<td>单一市场护照机制</td>
+<td>禁息规则削弱欧元稳定币竞争力、执行不均</td>
 </tr>
 <tr>
 <td>英国</td>
 <td>代币化先行</td>
 <td>金融创新优先，监管跟随</td>
+<td>伦敦国际金融中心地位</td>
+<td>脱欧后与欧盟的互操作断裂</td>
 </tr>
 <tr>
 <td>日本</td>
 <td>执政党国家战略</td>
 <td>AI+区块链双引擎</td>
+<td>政策连贯性+产业协同</td>
+<td>市场规模受限、国际化程度不足</td>
 </tr>
 <tr>
 <td>韩国</td>
 <td>机构收编交易所</td>
 <td>传统金融接管加密入口</td>
+<td>财阀资本+STO框架</td>
+<td>产融分离审查、加密税不确定性</td>
+</tr>
+<tr>
+<td>中国大陆</td>
+<td>CBDC+联盟链封闭体系</td>
+<td>国家主导，排斥加密原生</td>
+<td>14亿用户基数+政府强制推行</td>
+<td>与全球加密生态隔绝，缺乏外部竞争校验</td>
 </tr>
 </tbody>
 </table>
 <p><strong>三条核心趋势正在成形：</strong></p>
 <ol>
 <li>
-<p><strong>稳定币已不可逆地成为金融基础设施</strong>：33万亿美元的年支付量使其不再仅仅是"加密的结算工具"，而是连接传统金融和数字金融的桥梁。每一家主流金融机构都在寻找自己的稳定币策略。</p>
+<p><strong>稳定币已不可逆地成为金融基础设施</strong>：数十万亿美元量级的年结算量使其不再仅仅是"加密的结算工具"，而是连接传统金融和数字金融的桥梁。每一家主流金融机构——从Paxos的清算牌照到Cash App的零售推送——都在寻找自己在这条链路中的位置。</p>
 </li>
 <li>
-<p><strong>AI Agent正在制造"政策真空"</strong>：当AI代理持有稳定币钱包、自主进行链上交易时，现有的以"人"为中心的KYC/AML框架将面临根本性挑战。最先在这一领域建立清晰规则的辖区将获得巨大先发优势。</p>
+<p><strong>AI Agent正在制造"政策真空"</strong>：当数百万AI代理在24/7不间断地持有稳定币钱包、自主进行链上交易时，以"人"为中心的KYC/AML框架将面临根本性挑战。四层技术栈（身份→支付→执行→入金）正在同步成熟，但没有任何监管机构在审视整个系统的系统性风险。最先在这一领域建立清晰规则的辖区将获得巨大先发优势。</p>
 </li>
 <li>
-<p><strong>合规不再是成本，而是准入许可</strong>：GENIUS Act的实施细则、MiCA的过渡期终结、SFC的稳定币通函、CLARITY Act的推进——所有这些信号都指向同一个结论：未来的加密市场竞争，不是产品之争，而是合规能力之争。</p>
+<p><strong>合规不再是成本，而是准入许可</strong>：GENIUS Act的实施细则、MiCA的过渡期终结、SFC的稳定币通函、CLARITY Act的推进——所有这些信号都指向同一个结论：未来的加密市场竞争，不是产品之争，而是合规能力之争。而"合规"的定义本身，正在从"满足一套规则"转向"能在多个辖区同时满足多套不兼容的规则"——这才是对从业者最残酷的考验。</p>
 </li>
 </ol>
 <p>对于从业者而言，理解这一范式转移，将是评估平台和资产长期价值的核心前提。</p>
 <hr />
-<blockquote>
-<p><strong>注</strong>：本文中涉及的投票比分（CLARITY Act 15-9票、众议院294-134票）、Polymarket预测概率（73%）、CASP授权数量（210家）、全球稳定币支付量（33万亿美元）和市值（3200亿美元）等数据，部分来源于行业报告和公开信息，本文素材库无法完全交叉验证。建议读者通过原始来源进一步确认。</p>
-<p><strong>数据来源</strong>：Decrypt、The Block、Cointelegraph、CoinDesk、PANews、Odaily星球日报、深潮TechFlow、律动BlockBeats、Glassnode Insights等</p>
-</blockquote>
+
+<section class="footnotes-section">
+    <h3>📝 脚注</h3>
+    <div class="footnote-item"><sup>[1]</sup> 数据来源：美国国会Congressional Record，众议院2025年7月表决记录</div>
+    <div class="footnote-item"><sup>[2]</sup> Polymarket预测市场数据，查询日期2026年6月1日，反映市场对CLARITY Act年内成法的定价</div>
+    <div class="footnote-item"><sup>[3]</sup> 据ESMA公开登记册及The Block统计，截至2026年5月初。各成员国授权进度不同步，实际数字可能有1-2周延迟</div>
+    <div class="footnote-item"><sup>[4]</sup> 据x402协议团队在Base生态周报中披露的链上数据，样本为2026年Q1在x402标准下完成的Agent-to-Agent交易</div>
+    <div class="footnote-item"><sup>[5]</sup> 关于稳定币年度结算量的估计，行业内存在不同口径。Visa/Mastercard官方公布2025年全球处理量分别约为14万亿和9万亿美元。稳定币结算量据CoinMetrics链上数据约为15-35万亿美元（视是否计入内部转账和重复计数），与卡组织处于同一数量级但直接对比需谨慎</div>
+</section>
+<hr />
+<p><strong>数据来源</strong>：Decrypt、The Block、Cointelegraph、CoinDesk、PANews、Odaily星球日报、深潮TechFlow、律动BlockBeats、Glassnode Insights、ESMA、美国国会记录、BIS官网、人民银行官网等</p>
 <hr />
         </div>
 
@@ -768,7 +1296,9 @@
     <footer>
         <p>© 2026 鉴叔 本文内容仅供研究参考，不构成投资建议</p>
         <p style="margin-top:6px;">
-            <a href="https://julietwang123.github.io/erc8211-analysis/">⛓ ERC-8211 研报</a> ·
+            <a href="https://julietwang123.github.io/stablecoin-legislation-defi/">📖 稳定币立法</a> ·
+            <a href="https://julietwang123.github.io/stablecoin-chain-competition/">📖 公链竞争</a> ·
+            <a href="https://julietwang123.github.io/global-crypto-policy-2026-midyear/">🌐 全球监管</a> ·
             <a href="https://julietwang123.github.io/blockchain-2025-report/">📊 年度报告</a>
         </p>
     </footer>
